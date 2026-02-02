@@ -19,3 +19,19 @@ int main(){
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a,int &b, int &c, int &d){
+	int gong[4] = {a,b,c,d};
+
+	for (int i = 0 ; i < 4 ; i++){
+		int randomss = rand()%4 ;
+		int temp = gong[i];
+		gong[i] = gong[randomss];
+		gong[randomss] = temp ; 
+
+	}
+	a = gong[0]; 
+	b = gong[1];
+	c = gong[2];
+	d = gong[3];
+}
